@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="projects.css">
+    </head>
+    <body>
+        <header>
+            <img src="imgs/favicon-32x32.png" alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li class="active"><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="experiements.html">Experiments</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Projects</h1>
+            <hr>
+            <search>
+                <label>
+                    Filter By Project Name
+                    <input type="search" id="query">
+                </label>
+
+                <project-item>
+                    <details>
+                        <summary>
+                            Project 1 name
+                            <progress max="100" value="70">70%</progress>
+                        </summary>
+                        <dl>
+                            <dt>Description</dt>
+                            <dd>This is where a description of the project will go</dd>
+                        </dl>
+                    </details>
+                </project-item>
+
+                <project-item>
+                    <details>
+                        <summary>
+                            Project 2 name
+                            <progress max="100" value="100">100%</progress>
+                        </summary>
+                        <dl>
+                            <dt>Description</dt>
+                            <dd>This is where a description of the project will go</dd>
+                        </dl>
+                    </details>
+                </project-item>
+            </search>
+        </main>
+    </body>
+</html>

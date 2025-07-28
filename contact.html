@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact me</title>
+
+        <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="contact.css">
+    </head>
+    <body>
+        <header>
+            <img src="imgs/favicon-32x32.png" alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li class="active"><a href="contact.html">Contact Me</a></li>
+                    <li><a href="experiements.html">Experiments</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Contact Form</h1>
+            <form>
+                <form-item>
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="name" id="name" required autofocus>
+                </form-item>
+
+                <form-item>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </form-item>
+
+                <form-item>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" rows="6" cols="50"></textarea>
+                </form-item>
+
+                <fieldset>
+                    <legend>How did you like my site?</legend>
+                    <span class="item">
+                        <input type="radio" name="score" value="1" id="one">
+                        <label for="one">1</label>
+                    </span>
+
+                    <span class="item">
+                        <input type="radio" name="score" value="2" id="two">
+                        <label for="two">2</label>
+                    </span>
+
+                    <span class="item">
+                        <input type="radio" name="score" value="3" id="three">
+                        <label for="three">3</label>
+                    </span>
+
+                    <span class="item">
+                        <input type="radio" name="score" value="4" id="four">
+                        <label for="four">4</label>
+                    </span>
+
+                    <span class="item">
+                        <input type="radio" name="score" value="5" id="five">
+                        <label for="five">5</label>
+                    </span>
+                </fieldset>
+
+                <form-item>
+                    <label for="Purpose">Purpose of Contact:</label>
+                    <input type="text" list="Purpose-list" id="Purpose" name="Purpose">
+
+                    <datalist id="Purpose-list">
+                        <option value="Job"></option>
+                        <option value="hiring"></option>
+                        <option value="questions"></option>
+                        <option value="For fun"></option>
+                    </datalist>
+                </form-item>
+
+                <form-item>
+                    <label for="referral">How did you find me?</label>
+                    <select name="referral" id="referral">
+                        <option value="">-- Select One --</option>
+                        <optgroup label="Social Media">
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="github">GitHub</option>
+                        </optgroup>
+                        <optgroup label="Other">
+                            <option value="friend">Referral from a Friend</option>
+                            <option value="search_engine">Search Engine</option>
+                            <option value="other">Other</option>
+                        </optgroup>
+                    </select>
+                </form-item>
+
+                <button type="submit">Send</button>
+            </form>
+        </main>
+    </body>
+</html>

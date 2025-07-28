@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <noscript>
+            <h1>Please enable JavaScript then press <kbd>Ctrl</kbd> + <kbd>R</kbd></h1>
+        </noscript>
+
+        <header>
+            <img src="imgs/favicon-32x32.png" alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="experiements.html">Experiments</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Experiments</h1>
+            <hr>
+            <hello-world></hello-world>
+            <dialog open>
+                <pre>
+                     ________________________________________________
+                    /                                                \
+                   |    _________________________________________     |
+                   |   |                                         |    |
+                   |   |  C:\&gt; time to win_                   |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |                                         |    |
+                   |   |_________________________________________|    |
+                   |                                                  |
+                    \_________________________________________________/
+                           \___________________________________/
+                        ___________________________________________
+                     _-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- `-_
+                  _-'.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.`-_
+               _-'.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`__`. .-.-.-.`-_
+            _-'.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.`-_
+         _-'.-.-.-.-.-. .---.-. .-------------------------. .-.---. .---.-.-.-.`-_
+        :-------------------------------------------------------------------------:
+        `---._.-------------------------------------------------------------._.---'
+                </pre>
+                <form method="dialog">
+                    <button type="submit">ok</button>
+                </form>
+            </dialog>
+
+            <section>
+                <h2>Audio</h2>
+                <p>Our Song - TheFatRat</p>
+                <audio controls src="assests/OURSONG.mp3"></audio>
+            </section>
+            <section>
+                <h2>Video</h2>
+                <video controls src="assests/valclip.mp4" width="500"></video>
+            </section>
+
+            <section>
+                <h2>Canvas</h2>
+                <canvas width="150" height="150">
+                    red square
+                </canvas>
+                <br>
+                <button type="button" onclick="showSquare()">Paint the red square!</button>
+            </section>
+            <section>
+                <h2>Figure + SVG</h2>
+                <figure>
+                    <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="40" stroke="red" stroke-width="1" fill="blue"></circle>
+                    </svg>
+                    <figcaption>SVG Circle</figcaption>
+                </figure>
+            </section>
+            <section id="Ranking-of-colors">
+                <h2>Ordered List</h2>
+                <h3>Ranking of colors</h3>
+                <ol>
+                    <li>Red</li>
+                    <li>Blue</li>
+                    <li><ins>Yellow</ins></li>
+                    <li><del>green</del></li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Table and Template</h2>
+                <table id="userTable">
+                    <caption>User Data</caption>
+                    <colgroup>
+                        <col span="1" class="Name">
+                        <col span="1" class="Email">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <template id="rowTemplate">
+                    <tr>
+                    <td class="name"></td>
+                    <td class="email"></td>
+                    </tr>
+                </template>
+            </section>
+
+            <section id="Extra">
+                <h2>Extra Credit</h2>
+                <math>
+                    <mi>E</mi>
+                    <mo>=</mo>
+                    <mi>m</mi>
+                    <msup>
+                        <mi>c</mi>
+                        <mn>2</mn>
+                    </msup>
+                </math>
+                <p>
+                    The reason as to why this form of html has not been used until pretty recently is because not many browsers supported it.
+                    Chrome didn't until version 109 which was released in 2023, edge didn't until 109 also released in 2023.
+                </p>
+            </section>
+        </main>
+        <script>
+            window.addEventListener("load", (Event) => {
+                console.log("Hello! the page seemed to have loaded! Heh");
+            });
+
+            function showSquare(){
+                const canvas = document.querySelector("canvas");
+                const ctx = canvas.getContext("2d");
+                ctx.fillStyle = "red";
+                ctx.fillRect(10, 10, 100, 100);
+            }
+
+            class HelloWorld extends HTMLElement {
+                connectedCallback() {
+                    console.log("Hello world!");
+                }
+            }
+
+            customElements.define('hello-world', HelloWorld);
+        </script>
+    </body>
+</html>

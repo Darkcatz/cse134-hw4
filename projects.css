@@ -1,0 +1,117 @@
+@import url('./index.css');
+
+:root {
+    --search-gap: 1rem;
+    --shadow: 2px 2px 4px rgba(255, 255, 255, 0.534);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: var(--nav-border-radius);
+    margin: 1rem;
+
+    h1 {
+        font-size: calc(var(--text-font-size) * 2);
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        color: var(--accent-color);
+        text-shadow: var(--shadow);
+        transition: color var(--transition-speed) ease;
+    }
+
+    search {
+        display: flex;
+        flex-direction: column;
+        gap: var(--search-gap);
+        width: 100%;
+        max-width: 90vw;
+
+        label {
+            color:var(--accent-color);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        input[type="search"] {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--content-text-color);
+            border-radius: var(--nav-border-radius);
+            font-size: var(--text-font-size);
+            background: transparent;
+            color: var(--content-text-color);
+            transition: outline var(--transition-speed) ease, border-color var(--transition-speed) ease;
+
+            &:focus {
+                outline: 2px solid var(--accent-color);
+                outline-offset: 2px;
+                border-color: var(--accent-color);
+            }
+        }
+
+        project-item {
+            display: block;
+            
+            details {
+                border: 1px solid var(--content-text-color);
+                border-radius: var(--nav-border-radius);
+                overflow: hidden;
+                transition: border-color var(--transition-speed) ease;
+                background: var(--sub-section-bg-color);
+                color: var(--content-text-color);
+
+                &[open] {
+                    border-color: var(--accent-color);
+                }
+            }
+
+            summary {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 1.2em;
+                background: rgba(0, 0, 0, 0.1);
+                border: 1px solid var(--accent-color);
+                color: var(--accent-color);
+                transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+
+                &:hover {
+                    background: var(--nav-transition-color);
+                    color: var(--nav-text-hover);
+                }
+            }
+
+            progress {
+                min-width: 120px;
+                height: 1.25rem;
+            }
+
+            dl {
+                margin: 0;
+                padding: 1rem;  
+                background: rgba(0, 0, 0, 0.05);
+
+                dt {
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                }
+
+                dd {
+                    margin: 0;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
