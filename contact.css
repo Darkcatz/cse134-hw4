@@ -5,6 +5,7 @@
     --form-item-gap: 0.5rem;
     --fieldset-gap: 1rem;
     --radio-gap: 1rem;
+    --invalid-color: #ff7070;
 }
 
 /* Main container */
@@ -17,6 +18,7 @@ main {
     gap: 2rem;
     border-radius: var(--nav-border-radius);
     margin: 1rem;
+    transition: all 0.3s ease;
 
     h1 {
         font-size: calc(var(--text-font-size) * 2);
@@ -50,6 +52,17 @@ main {
                 font-size: var(--text-font-size);
             }
 
+            label:has(+ [required])::before{
+                content: "* ";
+                color: var(--invalid-color);
+            }
+
+            input:user-invalid{
+                outline: 2px solid var(--invalid-color);
+                outline-offset: 2px;
+                border-color: var(--invalid-color);
+            }
+
             input:is([type="text"], [type="email"]) {
                 padding: 0.75rem 1rem;
                 border: 1px solid var(--content-text-color);
@@ -63,6 +76,20 @@ main {
                     outline: 2px solid var(--accent-color);
                     outline-offset: 2px;
                     border-color: var(--accent-color);
+                }
+            }
+
+            .error {
+                color: var(--invalid-color);
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+                min-height: 1.25rem;
+                display: none;
+                transition: opacity 0.3s ease;
+
+                &.active{
+                    font-weight: 500;
+                    display: block;
                 }
             }
 
@@ -82,6 +109,23 @@ main {
                     outline: 2px solid var(--accent-color);
                     outline-offset: 2px;
                     border-color: var(--accent-color);
+                }
+            }
+            
+            char-counter {
+                font-size: 0.875rem;
+                color: var(--content-text-color);
+                margin-top: 0.25rem;
+                text-align: right;
+
+                &.warning {
+                    color: #ffa41c;
+                    font-weight: 500;
+                }
+
+                &.danger {
+                    color: var(--invalid-color);
+                    font-weight: 600;
                 }
             }
 

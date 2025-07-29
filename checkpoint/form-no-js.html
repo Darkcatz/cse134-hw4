@@ -27,24 +27,17 @@
                 <form-item>
                     <label for="name">Full Name:</label>
                     <input type="text" name="name" id="name" pattern="[A-Za-z0-9]+" required autofocus>
-                    <span class="error" aria-live="polite"></span>
                 </form-item>
 
                 <form-item>
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" required>
-                    <span class="error" aria-live="polite"></span>
                 </form-item>
 
                 <form-item>
                     <label for="message">Message:</label>
                     <textarea name="message" id="message" rows="6" cols="50" maxlength="300"></textarea>
-                    <char-counter>
-                        <span id="char-count">300</span> characters remaining
-                    </char-counter>
-                    <span class="error" aria-live="polite"></span>
                 </form-item>
-
                 <form-item>
                     <fieldset>
                         <legend>How did you like my site?</legend>
@@ -78,7 +71,6 @@
                 <form-item>
                     <label for="Purpose">Purpose of Contact:</label>
                     <input type="text" list="Purpose-list" id="Purpose" name="Purpose" maxlength="20" pattern="[A-Za-z0-9]+" required>
-                    <span class="error" aria-live="polite"></span>
 
                     <datalist id="Purpose-list">
                         <option value="Job"></option>
@@ -112,6 +104,5 @@
                 <button type="submit">Send</button>
             </form>
         </main>
-        <script src="contact.js"></script>
     </body>
 </html>

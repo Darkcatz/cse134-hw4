@@ -1,0 +1,38 @@
+:root,
+[data-theme="light"] {
+    --nav-color: transparent;
+    --nav-transition-color: #fac458a9;
+    --nav-text-color: #2c3e50;
+    --nav-text-hover: #ffffff;
+    --nav-shadow: #fac458a9;
+    --nav-padding: 1rem;
+    --nav-border-radius: 0.5rem;
+    --transition-speed: 0.3s;
+    --logo-size: 2.5rem;
+    --body-bg-color:#473b2c;
+    --sub-section-bg-color: #756352;
+    --accent-color: #fac458;
+    --strong-color: #fac458;
+    --em-color: #e8dcc0;
+    --text-font-size: 1.2rem;
+    --content-text-color:rgb(255, 252, 239);
+}
+
+[data-theme="dark"] {
+    --nav-color: transparent;
+    --nav-transition-color: #4a5568;
+    --nav-text-color: #e2e8f0;
+    --nav-text-hover: #ffffff;
+    --nav-shadow: #4a5568;
+    --nav-padding: 1rem;
+    --nav-border-radius: 0.5rem;
+    --transition-speed: 0.3s;
+    --logo-size: 2.5rem;
+    --body-bg-color: #1a202c;
+    --sub-section-bg-color: #2d3748;
+    --accent-color: #63b3ed;
+    --strong-color: #63b3ed;
+    --em-color: #cbd5e0;
+    --text-font-size: 1.2rem;
+    --content-text-color: #f7fafc;
+}

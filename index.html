@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +14,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <noscript>
+            <style>
+                header > button {
+                    display: none;
+                }
+            </style>
+        </noscript>
     </head>
     <body>
-        <noscript><p>Please enable JavaScript</p></noscript>
+        <noscript><p>Theme toggle requires JavaScript to be enabled.</p></noscript>
         <header>
             <img src="imgs/favicon-32x32.png" alt="logo">
             <nav>
@@ -28,6 +35,14 @@
                     <li><a href="experiements.html">Experiments</a></li>
                 </ul>
             </nav>
+
+            <button type="button" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                <span id="theme-icon">☀️</span>
+            </button>
+            <!-- <select>
+                <option value="light">light</option>
+                <option value="dark">dark</option>
+            </select> -->
         </header>
         <hr>
         <main>
@@ -90,5 +105,6 @@
             <p>My Email:</p><address><a href="mailto:andrewlichao@gmail.com">andrewlichao@gmail.com</a></address>
             <a href="contact.html">Click Here for the contact form!</a>
         </footer>
+        <script src="index.js"></script>
     </body>
 </html>
